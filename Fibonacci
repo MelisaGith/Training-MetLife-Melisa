@@ -1,0 +1,29 @@
+package paquetepruebas;
+
+import java.util.Scanner;
+
+public class Fibonacci2 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		Scanner scanner = new Scanner(System.in);
+		System.out.println("Ingresa numeros: ");
+		int numero = scanner.nextInt();
+		printFibonacciNum(numero);
+	}
+	
+	public static void printFibonacciNum(int numSerie) {
+		
+		int num1 = 0, num2 = 1, num3 = 0;
+		
+		for(int i=0; i<numSerie; i++) {
+			
+			num3 = num1+num2;
+			num1 = num2;
+			num2 = num3;
+			System.out.println(num3+" ");	
+		}
+		
+	}
+}
