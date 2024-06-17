@@ -1,0 +1,53 @@
+package paquetepruebas;
+
+import java.util.Scanner;
+
+
+public class GreatestNum {
+	
+
+	    public static void main(String[] args){
+	        
+	    Scanner read = new Scanner(System.in);
+	    
+	    int[] numbers = {0,0,0};
+	    int index = 0;
+	    
+	    while (index<numbers.length) {
+	        System.out.println("Ingrese los números");
+	        int num = read.nextInt();
+	        
+	        boolean accept = true;
+	        
+	        for (int i = 0; i < index; i++) {
+	            if (numbers[i] == num)  {
+	                
+	                accept = false;
+	                
+	                System.out.println("El número "+num+" ya está en la lista, ingrese otro.");
+	            }
+	        }
+	        if (accept) {
+	            numbers[index] = num;
+	            index++;
+	        }
+	    }
+	    
+	    read.close();
+	    
+	    System.out.println("Digitación finalizada. Los números que ha introducido son: ");
+	    for (int num: numbers) {
+	        System.out.println("-. "+num);
+	        
+	    }
+	        if (numbers[0]>numbers[1]) {
+	            System.out.println("El número mayor es: "+numbers[0]);
+	        } else {
+	            if (numbers[1]>numbers[2]) {
+	                System.out.println("El número mayor es: "+numbers[1]);
+	            } else {
+	                    System.out.println("El número mayor es: "+numbers[2]);
+	            }
+	        }
+	    }
+	}
